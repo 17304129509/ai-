@@ -1,0 +1,85 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>灵山 AI 数字人导游 - 游客端</title>
+  <link rel="stylesheet" href="/frontend/app.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="guide-panel">
+      <div class="avatar talkinghead-shell" id="avatar">
+        <div id="talkingHeadAvatar" class="talkinghead-avatar" aria-label="3D 数字人导游"></div>
+        <div id="avatarLoading" class="avatar-loading">正在加载 3D 数字人...</div>
+      </div>
+      <div class="status"><strong id="avatarName">灵小山</strong><span id="emotion">平静</span></div>
+      <div class="avatar-title" id="avatarTitle">灵山胜境讲解员</div>
+      <div class="chips" id="avatarChips"><span>语音问答</span><span>流式回答</span><span>情绪表情</span><span>伴随讲解</span></div>
+      <div class="avatar-picker">
+        <label for="visitorAvatarSelect">选择数字人</label>
+        <select id="visitorAvatarSelect"></select>
+      </div>
+      <div class="guide-meter">
+        <span>回答可信度</span>
+        <strong id="confidence">待提问</strong>
+      </div>
+    </section>
+
+    <section class="main-panel">
+      <header>
+        <h1>景区导览服务 AI 数字人</h1>
+        <nav class="view-tabs">
+          <button type="button" class="active" data-view="chatView">问答</button>
+          <button type="button" data-view="detailView">路线详情</button>
+          <a href="/admin">管理后台</a>
+        </nav>
+      </header>
+
+      <section id="chatView" class="view active">
+        <div class="quick-actions">
+          <button type="button" data-prompt="亲子路线怎么安排">亲子路线</button>
+          <button type="button" data-prompt="讲讲灵山大佛的文化">灵山大佛</button>
+          <button type="button" data-prompt="我赶时间，半天怎么玩">半天游</button>
+          <button type="button" data-prompt="今天人多，怎么避开拥挤">避开拥挤</button>
+        </div>
+        <div id="messages" class="messages"></div>
+        <form id="chatForm" class="composer">
+          <button type="button" class="voice" id="voiceButton" title="语音输入">Mic</button>
+          <input id="messageInput" placeholder="问我：灵山大佛怎么走？亲子路线怎么安排？" autocomplete="off" />
+          <button>发送</button>
+        </form>
+      </section>
+
+      <section id="detailView" class="view detail-view">
+        <div id="routeDetail" class="route-detail empty-state">
+          <h2>选择一条路线</h2>
+          <p>点击右侧路线卡片后，这里会切换为路线详情和伴随式讲解，不再把右侧面板撑得很长。</p>
+        </div>
+      </section>
+    </section>
+
+    <section class="routes-panel">
+      <div class="panel-title"><h2>路线推荐</h2><span>阶段 4 智能推荐</span></div>
+      <form id="routeForm" class="route-search">
+        <input id="interestInput" placeholder="亲子 / 历史文化 / 拍照轻松" />
+        <button>推荐</button>
+      </form>
+      <div id="routes" class="route-list"></div>
+      <div class="offline-tip" id="offlineTip">已启用本地缓存兜底：断网时仍可查看最近路线。</div>
+    </section>
+  </main>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "/frontend/vendor/three/three.module.js",
+      "three/addons/": "/frontend/vendor/three/addons/"
+    }
+  }
+  </script>
+  <script type="module" src="/frontend/avatar-talkinghead.js"></script>
+  <script src="/frontend/app.js"></script>
+</body>
+</html>
+
+

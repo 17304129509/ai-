@@ -1,0 +1,46 @@
+services:
+  app:
+    build: .
+    ports:
+      - "127.0.0.1:${GUIDE_PORT:-8000}:8000"
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/guide?allowPublicKeyRetrieval=true&sslMode=DISABLED
+      DB_USER: guide
+      DB_PASSWORD: ${DB_PASSWORD:-guide-local}
+      REDIS_HOST: redis
+      AGENT_API_KEY: ${AGENT_API_KEY:-ollama}
+      AGENT_TIMEOUT_SECONDS: ${AGENT_TIMEOUT_SECONDS:-90}
+      AGENT_MODEL: ${AGENT_MODEL:-qwen3:4b}
+      AGENT_BASE_URL: ${AGENT_BASE_URL:-http://host.docker.internal:11435/v1}
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: guide
+      MYSQL_USER: guide
+      MYSQL_PASSWORD: ${DB_PASSWORD:-guide-local}
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysql -h 127.0.0.1 -u guide -p\"$$MYSQL_PASSWORD\" guide -e 'SELECT 1'"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 15
+volumes:
+  mysql-data:
+  redis-data:

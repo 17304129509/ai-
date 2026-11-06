@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>灵山 AI 数字人导游 - 管理后台</title>
+  <link rel="stylesheet" href="/admin/admin.css" />
+</head>
+<body>
+  <div id="loginOverlay" class="login-overlay">
+    <form id="loginForm" class="login-box">
+      <h1>灵山管理端</h1>
+      <p>演示账号：admin / 123456</p>
+      <input id="username" placeholder="账号" value="admin" />
+      <input id="password" placeholder="密码" type="password" value="123456" />
+      <button>进入后台</button>
+    </form>
+  </div>
+
+  <aside>
+    <h1>灵山管理端</h1>
+    <nav>
+      <a href="#screen">实时大屏</a>
+      <a href="#kb">知识库管理</a>
+      <a href="#avatar">数字人配置</a>
+      <a href="#report">游客报告</a>
+      <a href="#feedback">真实反馈</a>
+      <a href="/visitor">游客端</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section id="screen" class="grid stats"></section>
+    <section class="charts">
+      <div class="panel"><h2>服务人次趋势</h2><div id="trendChart" class="line-chart"></div></div>
+      <div class="panel"><h2>消费结构</h2><div id="consumeChart" class="pie-wrap"></div></div>
+      <div class="panel"><h2>满意度分布</h2><div id="satisfactionChart" class="bar-chart"></div></div>
+      <div class="panel"><h2>客单价趋势</h2><div id="spendChart" class="line-chart"></div></div>
+    </section>
+
+    <section id="kb" class="panel">
+      <div class="title"><h2>知识库管理</h2><button id="addKnowledge">新增知识点</button></div>
+      <div class="bulk-import">
+        <textarea id="bulkText" placeholder="批量导入示例：&#10;九龙灌浴：建议提前查看演出时间，适合亲子和首次游客。&#10;梵宫：雨天推荐停留，重点讲解佛教艺术和建筑。"></textarea>
+        <button id="bulkImport" type="button">批量导入</button>
+      </div>
+      <div class="upload-import">
+        <div>
+          <strong>上传知识文档</strong>
+          <p>支持 .txt、.md、.json、.docx，上传后会自动拆分成知识条目。</p>
+        </div>
+        <input id="knowledgeFile" type="file" accept=".txt,.md,.json,.docx" />
+        <input id="uploadArea" value="灵山胜境" />
+        <input id="uploadCategory" value="文件上传" />
+        <button id="uploadKnowledge" type="button">上传导入</button>
+      </div>
+      <div id="knowledgeList" class="table"></div>
+    </section>
+
+    <section id="avatar" class="panel two">
+      <div>
+        <h2>数字人配置</h2>
+        <p>参考 Fay 的配置中心思路：形象、声音、风格统一保存，游客端会实时读取并应用。</p>
+      </div>
+      <div class="config-row"><label>形象档案</label><select id="profileSelect"></select></div>
+      <div class="config-row"><label>声音</label><select id="voiceSelect"></select></div>
+      <div class="config-row"><label>风格</label><select id="styleSelect"><option value="calm">沉稳</option><option value="warm">热情</option><option value="kid">亲子</option><option value="focused">服务/专注</option></select></div>
+      <button id="saveAvatar" type="button">保存配置</button>
+      <div id="avatarPreview" class="avatar-preview"></div>
+    </section>
+
+    <section id="report" class="panel"><h2>游客报告</h2><div id="reportBox"></div></section>
+    <section id="feedback" class="panel">
+      <div class="title"><h2>真实反馈分析</h2><button id="refreshFeedback" type="button">刷新分析</button></div>
+      <div id="feedbackSummary" class="feedback-summary"></div>
+      <div id="feedbackAnalysis" class="analysis-grid"></div>
+      <div id="latestInteractions" class="latest-list"></div>
+    </section>
+  </main>
+  <script src="/admin/admin.js"></script>
+</body>
+</html>

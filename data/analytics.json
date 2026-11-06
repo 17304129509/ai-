@@ -1,0 +1,132 @@
+{
+  "serviceTrend": [
+    136,
+    188,
+    246,
+    308,
+    284,
+    352,
+    421
+  ],
+  "hotQuestions": [
+    "灵山大佛怎么走",
+    "九龙灌浴几点开始",
+    "亲子路线怎么安排",
+    "梵宫需要多久",
+    "拈花湾夜游怎么玩",
+    "五印坛城有什么看点"
+  ],
+  "consumeCategories": {
+    "门票": 42,
+    "餐饮": 18,
+    "文创购物": 16,
+    "交通接驳": 9,
+    "演艺体验": 15
+  },
+  "satisfaction": {
+    "满意": 74,
+    "一般": 20,
+    "不满意": 6
+  },
+  "avgSpendTrend": [
+    210,
+    238,
+    256,
+    281,
+    304,
+    318,
+    342
+  ],
+  "sourceRecords": 777,
+  "spotMetrics": [
+    {
+      "name": "灵山大佛",
+      "type": "风景名胜与休闲度假",
+      "avgStayMinutes": 4,
+      "avgSpendYuan": 870,
+      "avgSatisfaction": 3.1
+    },
+    {
+      "name": "灵山胜境",
+      "type": "风景名胜与休闲度假",
+      "avgStayMinutes": 4,
+      "avgSpendYuan": 927,
+      "avgSatisfaction": 3.0
+    },
+    {
+      "name": "禅意小镇·拈花湾",
+      "type": "风景名胜与休闲度假",
+      "avgStayMinutes": 4,
+      "avgSpendYuan": 957,
+      "avgSatisfaction": 3.0
+    }
+  ],
+  "topVisitorAttractions": [
+    {
+      "name": "同里古镇",
+      "visits": 5476
+    },
+    {
+      "name": "宁波方特东方神画",
+      "visits": 5396
+    },
+    {
+      "name": "杭州宋城",
+      "visits": 5387
+    },
+    {
+      "name": "金茂大厦",
+      "visits": 5345
+    },
+    {
+      "name": "周庄",
+      "visits": 5333
+    },
+    {
+      "name": "东方明珠",
+      "visits": 5316
+    },
+    {
+      "name": "豫园",
+      "visits": 5304
+    },
+    {
+      "name": "上海科技馆",
+      "visits": 5292
+    },
+    {
+      "name": "世纪公园",
+      "visits": 5277
+    },
+    {
+      "name": "西湖风景名胜区",
+      "visits": 5273
+    },
+    {
+      "name": "上海博物馆",
+      "visits": 5262
+    },
+    {
+      "name": "乌镇",
+      "visits": 5255
+    },
+    {
+      "name": "上海海洋水族馆",
+      "visits": 5248
+    },
+    {
+      "name": "上海海昌海洋公园",
+      "visits": 5236
+    },
+    {
+      "name": "西塘古镇",
+      "visits": 5228
+    }
+  ],
+  "insights": [
+    "知识库已补充灵山胜境与拈花湾 22 个结构化景点，可支持更细粒度讲解。",
+    "游客行为数据包含停留、消费、满意度，可用于路线推荐和运营看板说明。",
+    "拈花湾夜游、梵宫室内游、亲子轻体力游可以作为现场高频推荐场景。"
+  ],
+  "source": "YQSY-HX/AI_Tour_Agent backend/knowledge_base"
+}

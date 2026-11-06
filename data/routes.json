@@ -1,0 +1,93 @@
+[
+  {
+    "id": "history-6h",
+    "title": "历史文化深度线",
+    "theme": "history",
+    "duration": "6小时",
+    "interestTags": [
+      "历史",
+      "佛教文化",
+      "建筑艺术",
+      "首次游览"
+    ],
+    "spots": [
+      "lingshan-wall",
+      "wuming-bridge",
+      "buddha-footprint",
+      "five-wisdom-gate",
+      "bodhi-avenue",
+      "nine-dragon",
+      "ashoka-pillar",
+      "xiangfu-temple",
+      "lingshan-buddha",
+      "brahma-palace",
+      "five-mudra"
+    ],
+    "description": "覆盖灵山中轴、寺院、佛教艺术与三大语系建筑，适合想系统理解灵山文化的游客。"
+  },
+  {
+    "id": "nature-5h",
+    "title": "自然休闲全景线",
+    "theme": "nature",
+    "duration": "5小时",
+    "interestTags": [
+      "自然",
+      "轻松",
+      "拍照",
+      "慢游"
+    ],
+    "spots": [
+      "lingshan-wall",
+      "wuming-bridge",
+      "bodhi-avenue",
+      "hundred-children",
+      "manfeilong-pagoda",
+      "brahma-palace",
+      "wujinyi-zhai",
+      "fantian-flower-sea"
+    ],
+    "description": "节奏更舒缓，兼顾入口湖景、菩提步道、艺术建筑与拈花湾花海，适合不想赶路的游客。"
+  },
+  {
+    "id": "family-4h",
+    "title": "亲子家庭轻松线",
+    "theme": "family",
+    "duration": "4小时",
+    "interestTags": [
+      "亲子",
+      "互动",
+      "轻体力",
+      "拍照"
+    ],
+    "spots": [
+      "lingshan-wall",
+      "wuming-bridge",
+      "nine-dragon",
+      "hundred-children",
+      "lingshan-buddha",
+      "buddhist-museum",
+      "nianhua-square"
+    ],
+    "description": "保留孩子更容易理解的动态景观、亲子雕塑和室内展陈，路线短、讲解点清晰。"
+  },
+  {
+    "id": "nianhua-night-3h",
+    "title": "拈花湾禅意夜游线",
+    "theme": "leisure",
+    "duration": "3小时",
+    "interestTags": [
+      "拈花湾",
+      "夜游",
+      "休闲",
+      "灯光秀"
+    ],
+    "spots": [
+      "nianhua-square",
+      "xiangyue-flower-street",
+      "nianhua-hall",
+      "wudeng-lake",
+      "luming-valley"
+    ],
+    "description": "聚焦拈花湾禅意小镇、香月花街与五灯湖夜间演艺，适合作为灵山日游后的延展体验。"
+  }
+]

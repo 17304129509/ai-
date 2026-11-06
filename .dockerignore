@@ -1,0 +1,8 @@
+.env
+.git
+target
+build
+__pycache__
+.local-runtime
+data/interaction_logs.json
+data/agent_feedback.jsonl
